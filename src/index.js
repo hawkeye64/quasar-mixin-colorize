@@ -7,7 +7,27 @@ export function isNamedCssColor (color) {
 }
 
 export function isCssColor (color) {
-  return (!!color && !!color.match(/^(#|(rgb|hsl)a?\()/)) || isNamedCssColor(color)
+  return !!color && (!!color.match(/^(#|(rgb|hsl)a?\()/) || isNamedCssColor(color))
+}
+
+export function isCssVar (color) {
+  return !!color && color.startsWith('--')
+}
+
+export function calculateColor (color, defaultColor = 'black') {
+  return color === void 0 && defaultColor !== void 0 // safety net
+    ? calculateColor(defaultColor)
+    : isCssColor(color)
+      ? color
+      : makeQuasarColorVar(color, defaultColor)
+}
+
+export function makeQuasarColorVar (color, defaultColor) {
+  const varStr = isCssVar(color)
+    ? color
+    : `--q-color-${color}`
+
+  return `var(${varStr}, '${defaultColor}')`
 }
 
 export default Vue.extend({
@@ -23,11 +43,12 @@ export default Vue.extend({
     },
 
     setBackgroundColor (color, data = {}) {
-      if (isCssColor(color)) {
+      if (isCssColor(color) || isCssVar(color)) {
+        const calcColor = calculateColor(color)
         data.style = {
           ...data.style,
-          'background-color': `${color}`,
-          'border-color': `${color}`
+          'background-color': `${calcColor}`,
+          'border-color': `${calcColor}`
         }
       } else if (color) {
         const colorName = color.toString().trim()
@@ -41,11 +62,13 @@ export default Vue.extend({
     },
 
     setTextColor (color, data = {}) {
-      if (isCssColor(color)) {
+      if (isCssColor(color) || isCssVar(color)) {
+        const calcColor = calculateColor(color)
+        console.log('calc: ', calcColor)
         data.style = {
           ...data.style,
-          'color': `${color}`,
-          'caret-color': `${color}`
+          'color': `${calcColor}`,
+          'caret-color': `${calcColor}`
         }
       } else if (color) {
         const colorName = color.toString().trim()
