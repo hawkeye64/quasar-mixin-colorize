@@ -99,10 +99,9 @@ So, what can be in a color? Any CSS color or one from the [Quasar Color Palette]
 |---|---|---|
 | isNamedCssColor | color | Returns true if passed in color is a css named color |
 | isCssColor | color | Returns true if passed in color is a named color, hex color or rgb/rgba/hsl/hsla color |
+| isCssVar | color | Returns true if passed in color is a CSS variable starting with '--' |
 | calculateColor | color, defaultColor = 'black' | Check if a color is a standard CSS color or a quasar color |
 | makeQuasarColorVar | color, defaultColor | Generate a CSS variable definition based on the quasar color or existing variable passed in i.e `var(--q-color-red-5, 'default')` |
 
-
-
-
-
+# Donate
+If you appreciate the work that went into this mix-in, please consider [donating to Quasar](https://donate.quasar.dev).
