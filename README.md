@@ -3,16 +3,16 @@ A Vue mix-in specifically for Quasar Framework to handle color and background-co
 
 # Install
 ```bash
-yarn add quasar-colorize
+yarn add quasar-mixin-colorize
 
 # or
 
-npm install quasar-colorize
+npm install quasar-mixin-colorize
 ```
 
 # Usage
 ```js
-import Colorize from 'quasar-colorize'
+import Colorize from 'quasar-mixin-colorize'
 
 export default Vue.extend({
   name: 'my-component',
