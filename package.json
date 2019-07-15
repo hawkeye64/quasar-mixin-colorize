@@ -1,0 +1,45 @@
+{
+  "name": "quasar-mixin-colorize",
+  "version": "1.0.0-alpha.1",
+  "description": "A Vue mix-in specifically for Quasar Framework to handle color and background-color rendering",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint --ext .js,.vue src",
+    "lint-fix": "eslint --ext .js,.vue src --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hawkeye64/quasar-colorize.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "quasar",
+    "quasar-framework",
+    "vue",
+    "mix-in",
+    "color",
+    "background-color"
+  ],
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "author": "Jeff Galbraith <jeff@quasar.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hawkeye64/quasar-colorize/issues"
+  },
+  "homepage": "https://github.com/hawkeye64/quasar-colorize#readme",
+  "devDependencies": {
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.0.1",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-vue": "^5.2.3",
+    "vue": "^2.6.10"
+  }
+}
