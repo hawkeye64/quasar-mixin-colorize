@@ -5,6 +5,17 @@
       <example-card title="Text" name="BasicRenderingColor" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingColor.vue').default)" />
       <example-card title="Background" name="BasicRenderingBackground" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingBackground.vue').default)" />
       <example-card title="Text and Background" name="BasicRenderingBoth" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingBoth.vue').default)" />
+      <q-markdown>
+For all examples below that take an input, you can manually enter any valid color as well. Here are some ideas you can try:
+
+| Color | Type |
+| --- | --- |
+| purple-7 | Quasar color palette |
+| --q-color-green-5 | Quasar css var color |
+| rgb(255, 128, 27) | rgb color |
+| coral | CSS named color |
+
+      </q-markdown>
       <example-card title="Text with Input" name="BasicRenderingColorSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingColorSelection.vue').default)" />
       <example-card title="Background with Input" name="BasicRenderingBackgroundSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingBackgroundSelection.vue').default)" />
       <example-card title="Text and Background with Input" name="BasicRenderingBothSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingBothSelection.vue').default)" />
