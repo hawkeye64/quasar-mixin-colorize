@@ -32,8 +32,11 @@ module.exports = function (ctx) {
 
       components: [
         'QBtn',
+        'QCard',
         'QColor',
+        'QDate',
         'QDrawer',
+        'QExpansionItem',
         'QHeader',
         'QIcon',
         'QInput',
@@ -45,18 +48,28 @@ module.exports = function (ctx) {
         'QPage',
         'QPageContainer',
         'QPopupProxy',
+        'QResizeObserver',
+        'QScrollArea',
+        'QSeparator',
+        'QTab',
+        'QTabPanel',
+        'QTabPanels',
+        'QTabs',
         'QToolbar',
-        'QToolbarTitle'
+        'QToolbarTitle',
+        'QTooltip'
       ],
 
       directives: [
-        'Ripple'
+        'Ripple',
+        'Scroll'
       ],
 
       // Quasar plugins
       plugins: [
         'Notify',
-        'Platform'
+        'Platform',
+        'Screen'
       ]
     },
 
