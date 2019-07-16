@@ -64,8 +64,8 @@ module.exports = function (ctx) {
 
     build: {
       scopeHoisting: true,
-      vueRouterMode: 'history',
-      publicPath: 'quasar-mixin-colorize',
+      // vueRouterMode: 'history',
+      // publicPath: 'quasar-mixin-colorize',
       // vueCompiler: true,
       // gzip: true,
       // analyze: true,
