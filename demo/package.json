@@ -1,12 +1,13 @@
 {
-  "name": "demo",
+  "name": "quasar-mixin-colorize-demo",
   "version": "0.0.1",
-  "description": "Quasar Mixin Colorize demo app",
+  "description": "Quasar Mixin Colorize demo",
   "productName": "Quasar Mixin Colorize",
   "cordovaId": "org.cordova.quasar.app",
   "author": "webnoob <allangaunt@gmail.com>",
   "private": true,
   "scripts": {
+    "build": "quasar build && cp ./src/404.html ./dist/spa",
     "lint": "eslint --ext .js,.vue src",
     "lint-fix": "eslint --ext .js,.vue src --fix",
     "test": "echo \"No test specified\" && exit 0"
