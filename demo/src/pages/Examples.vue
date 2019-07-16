@@ -2,8 +2,12 @@
   <hero>
     <div class="q-markdown">
       <example-title title="Basic" />
-      <example-card title="Rendering (Background)" name="BasicRenderingBackground" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingBackground.vue').default)" />
-      <example-card title="Rendering (Text and Background)" name="BasicRenderingBoth" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingBoth.vue').default)" />
+      <example-card title="Text" name="BasicRenderingColor" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingColor.vue').default)" />
+      <example-card title="Background" name="BasicRenderingBackground" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingBackground.vue').default)" />
+      <example-card title="Text and Background" name="BasicRenderingBoth" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingBoth.vue').default)" />
+      <example-card title="Text with Input" name="BasicRenderingColorSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingColorSelection.vue').default)" />
+      <example-card title="Background with Input" name="BasicRenderingBackgroundSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingBackgroundSelection.vue').default)" />
+      <example-card title="Text and Background with Input" name="BasicRenderingBothSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingBothSelection.vue').default)" />
 
     </div>
   </hero>
@@ -35,8 +39,12 @@ export default {
     this.toc = []
     this.tempToc = []
     this.addToToc('Basic')
-    this.addToToc('Rendering (Background)', 2)
-    this.addToToc('Rendering (Text and Background)', 2)
+    this.addToToc('Text', 2)
+    this.addToToc('Background', 2)
+    this.addToToc('Text and Background', 2)
+    this.addToToc('Text with Input', 2)
+    this.addToToc('Background with Input', 2)
+    this.addToToc('Text and Background with Input', 2)
 
     this.toc = this.tempToc
   },

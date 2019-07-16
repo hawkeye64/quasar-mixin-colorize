@@ -69,8 +69,12 @@ export default {
   name: 'ExampleCard',
 
   components: {
+    BasicRenderingColor: () => import('../examples/BasicRenderingColor'),
     BasicRenderingBackground: () => import('../examples/BasicRenderingBackground'),
-    BasicRenderingBoth: () => import('../examples/BasicRenderingBoth')
+    BasicRenderingBoth: () => import('../examples/BasicRenderingBoth'),
+    BasicRenderingColorSelection: () => import('../examples/BasicRenderingColorSelection'),
+    BasicRenderingBackgroundSelection: () => import('../examples/BasicRenderingBackgroundSelection'),
+    BasicRenderingBothSelection: () => import('../examples/BasicRenderingBothSelection')
   },
 
   props: {
