@@ -64,7 +64,6 @@ export default Vue.extend({
     setTextColor (color, data = {}) {
       if (isCssColor(color) || isCssVar(color)) {
         const calcColor = calculateColor(color)
-        console.log('calc: ', calcColor)
         data.style = {
           ...data.style,
           'color': `${calcColor}`,
