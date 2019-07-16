@@ -3,5 +3,6 @@
     "quasarConfFixMode": "automatic",
     "sort": true
   },
-  "@quasar/qmarkdown": {}
+  "@quasar/qmarkdown": {},
+  "@quasar/qribbon": {}
 }
