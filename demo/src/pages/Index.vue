@@ -49,7 +49,7 @@ export default {
 
   data () {
     return {
-      userTextColor: '--some-bob-var',
+      userTextColor: '--q-color-red-5',
       userBgColor: 'purple-3'
     }
   },
@@ -59,9 +59,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-  // @import 'quasar-mixin-colorize/qColors.styl'
-  @import '../../../src/qColors.styl'
-  // $ // Here to trigger Quasar import of variables.
-</style>
