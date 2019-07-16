@@ -40,6 +40,9 @@ The above example is an example. Basically, if color and backgroundColor are not
 Another use case might be where you want to use the values provided by colorize to set your own variables. See this example of how [QRibbon](https://github.com/quasarframework/app-extension-qribbon) handles it (simplified version for illustrative purposes).
 
 ```js
+// Import all Quasar's colors as CSS vars so we can use e.g --q-color-red-5
+import 'quasar-mixin-colorize/src/qColors.styl'
+
 import Colorize, { calculateColor } from 'quasar-mixin-colorize'
 
 export default Vue.extend({
