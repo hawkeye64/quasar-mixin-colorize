@@ -1,6 +1,6 @@
 <template>
 <div class="q-pa-md">
-    <div class="q-gutter-md row items-start">
+    <div class="q-gutter-md row justify-around">
       <q-input
         filled
         v-model="color"
