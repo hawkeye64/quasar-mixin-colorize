@@ -1,5 +1,5 @@
 <template>
-  <div class="row justify-around">
+  <div class="q-pa-md row justify-around">
     <my-component
       :color="color"
     >

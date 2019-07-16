@@ -1,10 +1,9 @@
 <template>
 <div class="q-pa-md">
-    <div class="q-gutter-md row justify-around">
+    <div class="q-pb-md q-gutter-md row justify-around">
       <q-input
         filled
         v-model="color"
-        class="my-input"
       >
         <template v-slot:append>
           <q-icon name="colorize" class="cursor-pointer">
@@ -18,9 +17,6 @@
       <q-input
         filled
         v-model="bgColor"
-        :rules="['anyColor']"
-        hint="With validation"
-        class="my-input"
       >
         <template v-slot:append>
           <q-icon name="colorize" class="cursor-pointer">
@@ -32,7 +28,7 @@
       </q-input>
     </div>
     <q-separator />
-    <div class="row justify-around">
+    <div class="q-pa-md row justify-around">
       <my-component
         :color="color"
         :bg-color="bgColor"
