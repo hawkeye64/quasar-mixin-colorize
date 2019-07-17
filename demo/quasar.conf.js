@@ -33,6 +33,7 @@ module.exports = function (ctx) {
       components: [
         'QBtn',
         'QCard',
+        'QCheckbox',
         'QColor',
         'QDate',
         'QDrawer',
@@ -43,11 +44,13 @@ module.exports = function (ctx) {
         'QItem',
         'QItemLabel',
         'QItemSection',
+        'QKnob',
         'QLayout',
         'QList',
         'QPage',
         'QPageContainer',
         'QPopupProxy',
+        'QRadio',
         'QResizeObserver',
         'QScrollArea',
         'QSelect',
@@ -59,10 +62,7 @@ module.exports = function (ctx) {
         'QToggle',
         'QToolbar',
         'QToolbarTitle',
-        'QTooltip',
-        'QRadio',
-        'QCheckbox',
-        'QKnob'
+        'QTooltip'
       ],
 
       directives: [
