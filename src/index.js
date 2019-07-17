@@ -30,7 +30,7 @@ export function makeQuasarColorVar (color, defaultColor) {
   return `var(${varStr}, '${defaultColor}')`
 }
 
-export default Vue.extend({
+export const Colorize = Vue.extend({
   name: 'colorize',
 
   props: {

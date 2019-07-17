@@ -8,7 +8,7 @@
 
 <script>
 import Vue from 'vue'
-import Colorize from 'quasar-mixin-colorize'
+import { Colorize } from 'quasar-mixin-colorize'
 
 const MyComponent = Vue.extend({
   name: 'my-component',

@@ -44,7 +44,7 @@ Can be found [here](https://github.com/hawkeye64/quasar-mixin-colorize/tree/mast
 
 ```js
 import Vue from 'vue'
-import Colorize from 'quasar-mixin-colorize'
+import { Colorize } from 'quasar-mixin-colorize'
 
 const MyComponent = Vue.extend({
   name: 'my-component',
@@ -81,7 +81,7 @@ const MyComponent = Vue.extend({
 // Import all Quasar's colors as CSS vars so we can use e.g --q-color-red-5
 import 'quasar-mixin-colorize/src/qColors.styl'
 
-import Colorize, { calculateColor } from 'quasar-mixin-colorize'
+import { Colorize, calculateColor } from 'quasar-mixin-colorize'
 
 export default Vue.extend({
   name: 'my-component',

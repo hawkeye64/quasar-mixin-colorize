@@ -1,7 +1,7 @@
 import Vue from 'vue'
 
 // Mixins
-import Colorize from '../../../src/index'
+import { Colorize } from 'quasar-mixin-colorize'
 
 // Utils
 import slot from 'quasar/src/utils/slot.js'
