@@ -38,12 +38,16 @@ export const Colorize = Vue.extend({
   },
 
   methods: {
+    __isValidCssColor (color) {
+      return isCssColor(color) || isCssVar(color)
+    },
+
     setBothColors (color, bgColor, data = {}) {
       return this.setTextColor(color, this.setBackgroundColor(bgColor, data))
     },
 
     setBackgroundColor (color, data = {}) {
-      if (isCssColor(color) || isCssVar(color)) {
+      if (this.__isValidCssColor(color)) {
         const calcColor = calculateColor(color)
         data.style = {
           ...data.style,
@@ -62,7 +66,7 @@ export const Colorize = Vue.extend({
     },
 
     setTextColor (color, data = {}) {
-      if (isCssColor(color) || isCssVar(color)) {
+      if (this.__isValidCssColor(color)) {
         const calcColor = calculateColor(color)
         data.style = {
           ...data.style,
@@ -77,6 +81,37 @@ export const Colorize = Vue.extend({
         }
       }
       return data
+    }
+  }
+})
+
+export const Theme = Vue.extend({
+  name: 'theme',
+
+  props: {
+    theme: {
+      type: Object,
+      default: () => {}
+    },
+    enableTheme: Boolean
+  },
+
+  methods: {
+    // this function exists for performance reasons. If you do not
+    // desire the performance hit of theming, be sure to set
+    // the property 'enable-themes' to false (default).
+    useDefaultTheme (color, bgColor, data = {}) {
+      return data
+    },
+
+    getThemeColors (keys = []) {
+      const colors = new Map()
+      if (this.enableTheme === true && this.theme !== void 0) {
+        keys.forEach((key) => {
+          colors.set(key, this.theme[key])
+        })
+      }
+      return colors
     }
   }
 })
