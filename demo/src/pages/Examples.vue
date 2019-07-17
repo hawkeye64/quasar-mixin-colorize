@@ -1,10 +1,12 @@
 <template>
   <hero>
     <div class="q-markdown">
-      <example-title title="Basic" />
-      <example-card title="Text" name="BasicRenderingColor" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingColor.vue').default)" />
-      <example-card title="Background" name="BasicRenderingBackground" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingBackground.vue').default)" />
-      <example-card title="Text and Background" name="BasicRenderingBoth" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingBoth.vue').default)" />
+      <example-title title="Colorize Basic" />
+      <example-card title="Text" name="ColorizeColor" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeColor.vue').default)" />
+      <example-card title="Background" name="ColorizeBackground" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeBackground.vue').default)" />
+      <example-card title="Text and Background" name="ColorizeBoth" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeBoth.vue').default)" />
+
+      <example-title title="Colorize Advanced" />
       <q-markdown>
 For all examples below that take an input, you can manually enter any valid color as well. Here are some ideas you can try:
 
@@ -17,10 +19,15 @@ For all examples below that take an input, you can manually enter any valid colo
 | coral | CSS named color |
 
       </q-markdown>
-      <example-card title="Text with Input" name="BasicRenderingColorSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingColorSelection.vue').default)" />
-      <example-card title="Background with Input" name="BasicRenderingBackgroundSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingBackgroundSelection.vue').default)" />
-      <example-card title="Text and Background with Input" name="BasicRenderingBothSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/BasicRenderingBothSelection.vue').default)" />
+      <example-card title="Text with Input" name="ColorizeColorSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeColorSelection.vue').default)" />
+      <example-card title="Background with Input" name="ColorizeBackgroundSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeBackgroundSelection.vue').default)" />
+      <example-card title="Text and Background with Input" name="ColorizeBothSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ColorizeBothSelection.vue').default)" />
 
+      <example-title title="Theme Basic" />
+      <example-card title="Simple Theme" name="ThemeSimple" :tag-parts="getTagParts(require('!!raw-loader!../examples/ThemeSimple.vue').default)" />
+
+      <example-title title="Theme Advanced" />
+      <example-card title="Theme Selection" name="ThemeSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ThemeSelection.vue').default)" />
     </div>
   </hero>
 </template>
@@ -50,13 +57,18 @@ export default {
   mounted () {
     this.toc = []
     this.tempToc = []
-    this.addToToc('Basic')
+    this.addToToc('Colorize Basic')
     this.addToToc('Text', 2)
     this.addToToc('Background', 2)
     this.addToToc('Text and Background', 2)
+    this.addToToc('Colorize Advanced')
     this.addToToc('Text with Input', 2)
     this.addToToc('Background with Input', 2)
     this.addToToc('Text and Background with Input', 2)
+    this.addToToc('Theme Basic')
+    this.addToToc('Simple Theme', 2)
+    this.addToToc('Theme Advanced')
+    this.addToToc('Theme Selection', 2)
 
     this.toc = this.tempToc
   },

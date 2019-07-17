@@ -40,11 +40,6 @@ const MyComponent = Vue.extend({
     bgColor: String
   },
 
-  data () {
-    return {
-    }
-  },
-
   render (h) {
     return h('div', this.setBackgroundColor(this.bgColor, {
       style: {

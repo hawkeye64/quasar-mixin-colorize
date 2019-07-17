@@ -50,11 +50,13 @@ module.exports = function (ctx) {
         'QPopupProxy',
         'QResizeObserver',
         'QScrollArea',
+        'QSelect',
         'QSeparator',
         'QTab',
         'QTabPanel',
         'QTabPanels',
         'QTabs',
+        'QToggle',
         'QToolbar',
         'QToolbarTitle',
         'QTooltip'

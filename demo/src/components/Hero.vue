@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="page-header">
-      <h1 class="project-name">Colorize</h1>
+      <h1 class="project-name">Colorize & Theme</h1>
       <h2 class="project-tagline"></h2>
       <q-btn type="a" href="https://github.com/hawkeye64/quasar-mixin-colorize" target="_blank" class="btn" label="View on GitHub" no-caps flat/>
       <q-btn to="/docs" class="btn" label="Docs" no-caps flat/>

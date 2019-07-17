@@ -69,12 +69,14 @@ export default {
   name: 'ExampleCard',
 
   components: {
-    BasicRenderingColor: () => import('../examples/BasicRenderingColor'),
-    BasicRenderingBackground: () => import('../examples/BasicRenderingBackground'),
-    BasicRenderingBoth: () => import('../examples/BasicRenderingBoth'),
-    BasicRenderingColorSelection: () => import('../examples/BasicRenderingColorSelection'),
-    BasicRenderingBackgroundSelection: () => import('../examples/BasicRenderingBackgroundSelection'),
-    BasicRenderingBothSelection: () => import('../examples/BasicRenderingBothSelection')
+    ColorizeColor: () => import('../examples/ColorizeColor'),
+    ColorizeBackground: () => import('../examples/ColorizeBackground'),
+    ColorizeBoth: () => import('../examples/ColorizeBoth'),
+    ColorizeColorSelection: () => import('../examples/ColorizeColorSelection'),
+    ColorizeBackgroundSelection: () => import('../examples/ColorizeBackgroundSelection'),
+    ColorizeBothSelection: () => import('../examples/ColorizeBothSelection'),
+    ThemeSimple: () => import('../examples/ThemeSimple'),
+    ThemeSelection: () => import('../examples/ThemeSelection')
   },
 
   props: {
