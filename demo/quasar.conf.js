@@ -59,7 +59,10 @@ module.exports = function (ctx) {
         'QToggle',
         'QToolbar',
         'QToolbarTitle',
-        'QTooltip'
+        'QTooltip',
+        'QRadio',
+        'QCheckbox',
+        'QKnob'
       ],
 
       directives: [

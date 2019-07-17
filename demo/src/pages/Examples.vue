@@ -28,6 +28,7 @@ For all examples below that take an input, you can manually enter any valid colo
 
       <example-title title="Theme Advanced" />
       <example-card title="Theme Selection" name="ThemeSelection" :tag-parts="getTagParts(require('!!raw-loader!../examples/ThemeSelection.vue').default)" />
+      <example-card title="Theme Quasar Components" name="ThemeQuasarComponents" :tag-parts="getTagParts(require('!!raw-loader!../examples/ThemeQuasarComponents.vue').default)" />
     </div>
   </hero>
 </template>
@@ -69,6 +70,7 @@ export default {
     this.addToToc('Simple Theme', 2)
     this.addToToc('Theme Advanced')
     this.addToToc('Theme Selection', 2)
+    this.addToToc('Theme Quasar Components', 2)
 
     this.toc = this.tempToc
   },

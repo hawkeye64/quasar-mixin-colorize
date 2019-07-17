@@ -76,7 +76,8 @@ export default {
     ColorizeBackgroundSelection: () => import('../examples/ColorizeBackgroundSelection'),
     ColorizeBothSelection: () => import('../examples/ColorizeBothSelection'),
     ThemeSimple: () => import('../examples/ThemeSimple'),
-    ThemeSelection: () => import('../examples/ThemeSelection')
+    ThemeSelection: () => import('../examples/ThemeSelection'),
+    ThemeQuasarComponents: () => import('../examples/ThemeQuasarComponents')
   },
 
   props: {
