@@ -64,11 +64,11 @@ const MyComponent = Vue.extend({
           value: this.radio,
           val: type,
           label: label,
-          dark: this.enableTheme === true && this.theme && this.theme.color,
-          color: this.enableTheme === true && this.theme && this.theme.color ? this.theme.color : void 0
+          dark: (this.enableTheme === true && this.theme && 'color' in this.theme),
+          color: this.enableTheme === true && this.theme && 'color' in this.theme ? this.theme.color : void 0
         },
         on: {
-          ...this.$listeners
+          'input': (v) => { this.radio = v }
         }
       }))
     },
@@ -86,11 +86,11 @@ const MyComponent = Vue.extend({
       return h('q-checkbox', updateColors(colors.get(color), colors.get(bgColor), {
         props: {
           value: this.checkbox,
-          dark: this.enableTheme === true && this.theme && this.theme.color,
-          color: this.enableTheme === true && this.theme && this.theme.color ? this.theme.color : void 0
+          dark: (this.enableTheme === true && this.theme && 'color' in this.theme),
+          color: this.enableTheme === true && this.theme && 'color' in this.theme ? this.theme.color : void 0
         },
         on: {
-          ...this.$listeners
+          'input': (v) => { this.checkbox = v }
         }
       }))
     },
@@ -110,7 +110,7 @@ const MyComponent = Vue.extend({
           value: this.knob
         },
         on: {
-          ...this.$listeners
+          'input': (v) => { this.knob = v }
         }
       }))
     }
@@ -129,6 +129,7 @@ const MyComponent = Vue.extend({
     }
 
     return h('div', updateColors(colors.get(color), colors.get(bgColor), {
+      staticClass: 'q-pa-md',
       style: {
         width: '100%'
       }
