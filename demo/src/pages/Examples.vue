@@ -13,7 +13,7 @@ For all examples below that take an input, you can manually enter any valid colo
 | purple-7 | Quasar color palette |
 | --q-color-green-5 | Quasar css var color |
 | rgb(255, 128, 27) | rgb color |
-| hsl(120, 100%, 50%) | hsl value |
+| hsl(120, 100%, 50%) | hsl color |
 | coral | CSS named color |
 
       </q-markdown>
