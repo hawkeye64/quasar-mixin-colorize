@@ -17,13 +17,6 @@ const routes = [
     children: [
       { path: '', component: () => import('pages/Examples.vue') }
     ]
-  },
-  {
-    path: '/demo',
-    component: () => import('layouts/ColorizeLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/Colorize.vue') }
-    ]
   }
 ]
 
