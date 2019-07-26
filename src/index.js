@@ -51,8 +51,7 @@ export const Colorize = Vue.extend({
         const calcColor = calculateColor(color)
         data.style = {
           ...data.style,
-          'background-color': `${calcColor}`,
-          'border-color': `${calcColor}`
+          'background-color': `${calcColor}`
         }
       } else if (color) {
         const colorName = color.toString().trim()
