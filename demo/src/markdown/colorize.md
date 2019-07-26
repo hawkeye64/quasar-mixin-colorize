@@ -81,14 +81,14 @@ export default Vue.extend({
   name: 'my-component',
 
   mixins: [Colorize],
-  
+
   props: {
     backgroundColor: {
       type: String,
       default: 'primary' // any color
     }
   },
-                    
+
   computed: {
     styles () {
       let style = {}
@@ -562,3 +562,6 @@ You can see the QCalendar theming in action [here](https://quasarframework.githu
 
 # Donate
 If you appreciate the work that went into this mix-in, please consider [donating to Quasar](https://donate.quasar.dev).
+
+---
+This page created with [QMarkdown](https://quasarframework.github.io/app-extension-qmarkdown), another great Quasar App Extension.
