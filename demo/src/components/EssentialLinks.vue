@@ -25,7 +25,7 @@
       </q-item-section>
       <q-item-section>
         <q-item-label>Colorize home</q-item-label>
-        <q-item-label caption>@hawkeye64/quasar-mixin-colorize</q-item-label>
+        <q-item-label caption>quasar-mixin-colorize</q-item-label>
       </q-item-section>
     </q-item>
     <q-item clickable tag="a" target="_blank" href="https://github.com/quasarframework/app-extension-qmarkdown">
