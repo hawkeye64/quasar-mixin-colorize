@@ -1,6 +1,6 @@
 {
   "name": "quasar-mixin-colorize",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "A Vue mix-in specifically for Quasar Framework to handle color and background-color rendering",
   "main": "src/index.js",
   "scripts": {
