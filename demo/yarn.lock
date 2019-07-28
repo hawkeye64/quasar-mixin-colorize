@@ -6412,7 +6412,7 @@ quasar-mixin-colorize@^1.0.0-alpha.4:
   integrity sha512-ZTR4RTHaxEdrbyyV3CAJm7AZNoctB7xtoH5mZq9a+nenFFUZ1mYU5svuy7zBmtjQFsv0h7qU2uTOCpd1KRUVBg==
 
 "quasar-mixin-colorize@file:..":
-  version "1.0.0-alpha.4"
+  version "1.0.0-alpha.6"
 
 quasar@^1.0.5:
   version "1.0.5"

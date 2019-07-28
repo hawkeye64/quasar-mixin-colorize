@@ -5,7 +5,15 @@ Colorize and Theme are Vue Mix-ins for components created for Quasar Framework. 
 
 # Features
 
-Allows you to "skin" your component with customized text and background colors. You can use any color from the [Quasar Color Palette](https://quasar.dev/style/color-palette#Color-List), any # color (ex: `#c0c0c0`), rgb/rgba/hsl/hsla color (ex: `rgb(255,0,0)`), any css named colors (ex: `ghostwhite`) or any Quasar colors from css var (ex: `--q-color-red-10`). This is a lot of choices!
+Allows you to "skin" your component with customized text, background and border colors. You can use:
+1. any color from the [Quasar Color Palette](https://quasar.dev/style/color-palette#Color-List),
+2. any # color (ex: `#c0c0c0`),
+3. rgb/rgba/hsl/hsla color (ex: `rgb(255,0,0)`),
+4. any css named colors (ex: `ghostwhite`) or
+5. any Quasar colors from css var (ex: `--q-color-red-10`)
+6. any Quasar colors as `border-` (ex: `border-blue-grey-10`)
+
+This is a lot of choices!
 
 # Install
 To add this mix-in to your Quasar application, run the following (in your Quasar app folder):
@@ -39,7 +47,7 @@ Source for this application can be found [here](https://github.com/hawkeye64/qua
 
 ## Colorize
 
-### Use Any Color Definition
+### Use Text and Background Color Definition
 
 ```js
 import Vue from 'vue'
@@ -58,6 +66,36 @@ const MyComponent = Vue.extend({
 
   render (h) {
     return h('div', this.setBothColors(this.color, this.bgColor, {
+      style: {
+        width: '200px',
+        height: '200px'
+      }
+    }), [
+      this.$slots.default
+    ])
+  }
+})
+```
+
+### Use Border Color Definition
+
+```js
+import Vue from 'vue'
+import { Colorize } from 'quasar-mixin-colorize'
+
+const MyComponent = Vue.extend({
+  name: 'my-component',
+
+  mixins: [Colorize],
+
+  props: {
+    // color prop is added by colorize mix-in
+    // background-color is optional and needs to be added if needed
+    borderColor: String
+  },
+
+  render (h) {
+    return h('div', this.setBorderColor(this.color, this.borderColor, {
       style: {
         width: '200px',
         height: '200px'
@@ -525,19 +563,20 @@ You can see the QCalendar theming in action [here](https://quasarframework.githu
 
 # Colorize API
 
-## Vue Properties
+## Colorize Properties
 | Vue&nbsp;Property | Type	| Description |
 |---|---|---|
 | color | String | Any css color or from the Quasar Color Palette |
 
-## Vue Methods
+## Colorize Methods
 | Vue&nbsp;method | Args	| Description |
 |---|---|---|---|
 | setTextColor | color, {} | Object | The color and object containing `style` |
 | setBackgroundColor | background-color, {} | Object | The background-color and object containing `style` |
+| setBorderColor | border-color, {} | Object | The border-color and object containing `style` |
 | setBothColors | color, bgColor, {} | Object | The color, background-color and object containing `style` |
 
-## Exported Functions
+## Exported Colorize Functions
 | Vue&nbsp;method | Args	| Returns | Description |
 |---|---|---|---|
 | isNamedCssColor | color | Boolean | Returns true if passed in color is a css named color |
@@ -548,13 +587,13 @@ You can see the QCalendar theming in action [here](https://quasarframework.githu
 
 # Theme API
 
-## Vue Properties
+## Theme Properties
 | Vue&nbsp;Property | Type	| Description |
 |---|---|---|
 | theme-enabled | Boolean | Turn theming on or off |
 | theme | Object | A theme object |
 
-## Vue Methods
+## Theme Methods
 | Vue&nbsp;method | Args	| Returns | Description |
 |---|---|---|---|
 | useDefaultTheme | color, bgColor, data = {} | The passed in `data` object | |

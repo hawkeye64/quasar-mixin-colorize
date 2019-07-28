@@ -80,6 +80,23 @@ export const Colorize = Vue.extend({
         }
       }
       return data
+    },
+
+    setBorderColor (color, data = {}) {
+      if (this.__isValidCssColor(color)) {
+        const calcColor = calculateColor(color)
+        data.style = {
+          ...data.style,
+          'border-color': `${calcColor}`
+        }
+      } else if (color) {
+        const colorName = color.toString().trim()
+        data.class = {
+          ...data.class,
+          ['border-' + colorName]: true
+        }
+      }
+      return data
     }
   }
 })

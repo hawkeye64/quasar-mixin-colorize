@@ -1,6 +1,15 @@
+$colors = ('red' 'pink' 'purple' 'deep-purple' 'indigo' 'blue' 'light-blue' 'cyan' 'teal' 'green' 'light-green' 'lime' 'yellow' 'amber' 'orange' 'deep-orange' 'brown' 'grey' 'blue-grey')
+
 :root
-  $colors = ('red' 'pink' 'purple' 'deep-purple' 'indigo' 'blue' 'light-blue' 'cyan' 'teal' 'green' 'light-green' 'lime' 'yellow' 'amber' 'orange' 'deep-orange' 'brown' 'grey' 'blue-grey')
   for $num in range(0 (length($colors) - 1))
     --q-color-{$colors[$num]}: lookup('$' + $colors[$num])
     for $colorNum in (1..14)
       --q-color-{$colors[$num]}-{$colorNum}: lookup('$' + $colors[$num] + '-' + $colorNum)
+
+// generate 'border-' colors
+for $num in range(0 (length($colors) - 1))
+  .border-{$colors[$num]}
+    border-color: lookup('$' + $colors[$num])
+  for $colorNum in (1..14)
+    .border-{$colors[$num]}-{$colorNum}
+      border-color: lookup('$' + $colors[$num] + '-' + $colorNum)

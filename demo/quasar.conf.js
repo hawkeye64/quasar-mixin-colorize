@@ -9,7 +9,8 @@ module.exports = function (ctx) {
     ],
 
     css: [
-      'app.styl'
+      'app.styl',
+      '~quasar-mixin-colorize/src//qColors.styl'
     ],
 
     extras: [
@@ -98,7 +99,7 @@ module.exports = function (ctx) {
             formatter: require('eslint').CLIEngine.getFormatter('stylish')
           }
         })
-      } // ,
+      },
       // chainWebpack (chain) {
       //   const CopyWebpackPlugin = require('copy-webpack-plugin')
       //   if (ctx.prod === true) {
@@ -119,6 +120,9 @@ module.exports = function (ctx) {
       //       }
       //     }
       // }
+      transpileDependencies: [
+        /quasar-mixin-colorize[\\/]src/
+      ]
     },
 
     devServer: {
