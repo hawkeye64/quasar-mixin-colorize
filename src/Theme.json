@@ -30,7 +30,7 @@
         },
         "data": {
           "type": "Object",
-          "desc": "Typically the `{ } of a render function",
+          "desc": "Typically the `{ }` of a render function",
           "__exemption": [ "examples" ]
         }
       },
