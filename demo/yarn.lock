@@ -6435,8 +6435,13 @@ quasar-mixin-colorize@^1.0.0-alpha.4:
   resolved "https://registry.yarnpkg.com/quasar-mixin-colorize/-/quasar-mixin-colorize-1.0.0-alpha.4.tgz#94dfcf13e05fc99599e8937c4308e398d4b56d10"
   integrity sha512-ZTR4RTHaxEdrbyyV3CAJm7AZNoctB7xtoH5mZq9a+nenFFUZ1mYU5svuy7zBmtjQFsv0h7qU2uTOCpd1KRUVBg==
 
-quasar-mixin-colorize@^1.0.0-alpha.6, "quasar-mixin-colorize@file:..":
+quasar-mixin-colorize@^1.0.0-alpha.6:
   version "1.0.0-alpha.6"
+  resolved "https://registry.yarnpkg.com/quasar-mixin-colorize/-/quasar-mixin-colorize-1.0.0-alpha.6.tgz#6cd5cdb62d37bf3bde6b740f4ca4d70bf55bfeaf"
+  integrity sha512-4G4OFMCv+4tXQ74hMV7V8RA/UhWdj1WDxE7hryjj7p9RDXO9hiGKLDTOR86MtGbkSglIBvNwBsAO6yaKxktiuQ==
+
+"quasar-mixin-colorize@file:..":
+  version "1.0.0-alpha.7"
 
 quasar@^1.0.5:
   version "1.0.5"
