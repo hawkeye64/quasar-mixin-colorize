@@ -560,3 +560,14 @@ then, when rendering:
   }
 ```
 > You can see the QCalendar theming in action [here](https://quasarframework.github.io/app-extension-qcalendar/demo). Scroll down the bottom left, turn on theming and then select one of the themes.
+
+# Usage in Quasar App Extensions
+
+If you are using **quasar-mixin-colorize** in a Quasar App Extension, there are a couple things you can do to improve the use of this mixin.
+
+```js
+  // this app extension is dependent on colorize mixin
+  // so make sure it gets transpiled with the Quasar project properly
+  conf.build.transpileDependencies.push(/quasar-mixin-colorize[\\/]src/)
+  conf.css.push('~quasar-mixin-colorize/src/qColors.styl')
+```
