@@ -559,4 +559,4 @@ then, when rendering:
     }), '#')
   }
 ```
-> You can see the QCalendar theming in action [here](https://quasarframework.github.io/app-extension-qcalendar/demo). Scroll down the bottom left, turn on themes and then select one of the themes.
+> You can see the QCalendar theming in action [here](https://quasarframework.github.io/app-extension-qcalendar/demo). Scroll down the bottom left, turn on theming and then select one of the themes.
