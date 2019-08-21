@@ -559,48 +559,4 @@ then, when rendering:
     }), '#')
   }
 ```
-You can see the QCalendar theming in action [here](https://quasarframework.github.io/app-extension-qcalendar/demo). Scroll down the bottom left, turn on themes and then select one.
-
-# Colorize API
-
-## Colorize Properties
-| Vue&nbsp;Property | Type	| Description |
-|---|---|---|
-| color | String | Any css color or from the Quasar Color Palette |
-
-## Colorize Methods
-| Vue&nbsp;method | Args	| Description |
-|---|---|---|---|
-| setTextColor | color, {} | Object | The color and object containing `style` |
-| setBackgroundColor | background-color, {} | Object | The background-color and object containing `style` |
-| setBorderColor | border-color, {} | Object | The border-color and object containing `style` |
-| setBothColors | color, bgColor, {} | Object | The color, background-color and object containing `style` |
-
-## Exported Colorize Functions
-| Vue&nbsp;method | Args	| Returns | Description |
-|---|---|---|---|
-| isNamedCssColor | color | Boolean | Returns true if passed in color is a css named color |
-| isCssColor | color | Boolean | Returns true if passed in color is a named color, hex color or rgb/rgba/hsl/hsla color |
-| isCssVar | color | Boolean | Returns true if passed in color is a CSS variable starting with '--' |
-| calculateColor | color, defaultColor = 'black' | String | Check if a color is a standard CSS color or a quasar color |
-| makeQuasarColorVar | color, defaultColor | String | Generate a CSS variable definition based on the quasar color or existing variable passed in i.e `var(--q-color-red-5, 'default')` |
-
-# Theme API
-
-## Theme Properties
-| Vue&nbsp;Property | Type	| Description |
-|---|---|---|
-| theme-enabled | Boolean | Turn theming on or off |
-| theme | Object | A theme object |
-
-## Theme Methods
-| Vue&nbsp;method | Args	| Returns | Description |
-|---|---|---|---|
-| useDefaultTheme | color, bgColor, data = {} | The passed in `data` object | |
-| getThemeColors | keys = [] | Map | Returns a Map of theme items based on keys |
-
-# Donate
-If you appreciate the work that went into this mix-in, please consider [donating to Quasar](https://donate.quasar.dev).
-
----
-This page created with [QMarkdown](https://quasarframework.github.io/app-extension-qmarkdown), another great Quasar App Extension.
+> You can see the QCalendar theming in action [here](https://quasarframework.github.io/app-extension-qcalendar/demo). Scroll down the bottom left, turn on themes and then select one of the themes.
