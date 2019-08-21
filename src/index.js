@@ -29,6 +29,7 @@ export function makeQuasarColorVar (color, defaultColor) {
     ? color
     : `--q-color-${color}`
 
+  // return as a css string, ex: "var(--my-color, 'defaultColor')"
   return `var(${varStr}, '${defaultColor}')`
 }
 
@@ -51,12 +52,14 @@ export const Colorize = Vue.extend({
     setBackgroundColor (color, data = {}) {
       if (this.__isValidCssColor(color)) {
         const calcColor = calculateColor(color)
+        if (data.style === void 0) data.style = {}
         data.style = {
           ...data.style,
           'background-color': `${calcColor}`
         }
       } else if (color) {
         const colorName = color.toString().trim()
+        if (data.class === void 0) data.class = {}
         data.class = {
           ...data.class,
           ['bg-' + colorName]: true
@@ -69,6 +72,7 @@ export const Colorize = Vue.extend({
     setTextColor (color, data = {}) {
       if (this.__isValidCssColor(color)) {
         const calcColor = calculateColor(color)
+        if (data.style === void 0) data.style = {}
         data.style = {
           ...data.style,
           'color': `${calcColor}`,
@@ -76,6 +80,7 @@ export const Colorize = Vue.extend({
         }
       } else if (color) {
         const colorName = color.toString().trim()
+        if (data.class === void 0) data.class = {}
         data.class = {
           ...data.class,
           ['text-' + colorName]: true
@@ -87,12 +92,14 @@ export const Colorize = Vue.extend({
     setBorderColor (color, data = {}) {
       if (this.__isValidCssColor(color)) {
         const calcColor = calculateColor(color)
+        if (data.style === void 0) data.style = {}
         data.style = {
           ...data.style,
           'border-color': `${calcColor}`
         }
       } else if (color) {
         const colorName = color.toString().trim()
+        if (data.class === void 0) data.class = {}
         data.class = {
           ...data.class,
           ['border-' + colorName]: true
