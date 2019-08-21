@@ -22,7 +22,8 @@
     "vue",
     "mix-in",
     "color",
-    "background-color"
+    "background-color",
+    "theme"
   ],
   "engines": {
     "node": ">= 8.9.0",
