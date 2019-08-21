@@ -50,6 +50,7 @@ module.exports = function (ctx) {
         'QList',
         'QPage',
         'QPageContainer',
+        'QPageScroller',
         'QPopupProxy',
         'QRadio',
         'QResizeObserver',

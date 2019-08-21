@@ -4,5 +4,6 @@
     "sort": true
   },
   "@quasar/qribbon": {},
-  "@quasar/qmarkdown": {}
+  "@quasar/qmarkdown": {},
+  "@quasar/qpublish": {}
 }
