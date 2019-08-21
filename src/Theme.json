@@ -1,0 +1,58 @@
+{
+  "type": "mixin",
+  "props": {
+    "theme-enabled": {
+      "type": "Boolean",
+      "category": "style",
+      "desc": "Turns theming on or off"
+    },
+    "theme": {
+      "type": "Object",
+      "category": "style",
+      "desc": "A customized theme definition (see examples above)",
+      "__exemption": [ "examples" ]
+    }
+  },
+  "methods": {
+    "useDefaultTheme": {
+      "desc": "Used as a placeholder when theming is turned off (replaces `setBothColors` in Colorize mixin)",
+      "__exemption": [ "examples" ],
+      "params": {
+        "color": {
+          "type": "String",
+          "desc": "Any color from the [Quasar Color Pallete](https://quasar.dev/style/color-palette) or a CSS color (#, rgb, rgba, hls, etc)",
+          "__exemption": [ "examples" ]
+        },
+        "bgColor": {
+          "type": "String",
+          "desc": "Any color from the [Quasar Color Pallete](https://quasar.dev/style/color-palette) or a CSS color (#, rgb, rgba, hls, etc)",
+          "__exemption": [ "examples" ]
+        },
+        "data": {
+          "type": "Object",
+          "desc": "Typically the `{ } of a render function",
+          "__exemption": [ "examples" ]
+        }
+      },
+      "returns": {
+        "type": "Object",
+        "desc": "The passed in `data` with no modifications"
+      }
+    },
+    "getThemeColors": {
+      "desc": "Returns a Map of theme items based on passed in keys",
+      "__exemption": [ "examples" ],
+      "params": {
+        "keys": {
+          "type": "Array",
+          "desc": "An arry of keys to return from the `theme` object",
+          "__exemption": [ "examples" ]
+        }
+      },
+      "returns": {
+        "type": "Map",
+        "desc": "Returns a Map of theme items based on passed in keys"
+      }
+    }
+  }
+}
