@@ -571,3 +571,24 @@ If you are using **quasar-mixin-colorize** in a Quasar App Extension, there are 
   conf.build.transpileDependencies.push(/quasar-mixin-colorize[\\/]src/)
   conf.css.push('~quasar-mixin-colorize/src/qColors.styl')
 ```
+
+# Usage in Quasar App
+
+You will need to create a boot file for **quasar-mixin-colorize** to work properly in your Quasar app.
+
+```js
+import { Colorize, Theme } from 'quasar-mixin-colorize/src'
+
+export default async ({ Vue }) => {
+  Vue.component(Colorize)
+  Vue.component(Theme)
+}
+```
+
+and then register the boot file in your `quasar.conf.js`
+
+```js
+boot: [
+  'colorize'
+],
+```

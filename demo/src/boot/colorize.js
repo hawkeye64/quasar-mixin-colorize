@@ -1,6 +1,6 @@
-import { Colorize } from 'quasar-mixin-colorize/src'
+import { Colorize, Theme } from 'quasar-mixin-colorize/src'
 
-// "async" is optional
 export default async ({ Vue }) => {
   Vue.component(Colorize)
+  Vue.component(Theme)
 }
